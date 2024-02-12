@@ -1,10 +1,10 @@
 // https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 //
-// PC will randomly choose Rock, Papers or Scissors at the start of the game
-// Player will input Rock, Papers or Scissors
+// PC will randomly choose Rock, Paper or Scissors at the start of the game
+// Player will input Rock, Paper or Scissors
 // Winner is determined after 5 rounds
 
-const rps = ["Rock", "Papers", "Scissors"];
+const rps = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice() {
     return rps[Math.floor(Math.random()*3)];
@@ -31,12 +31,12 @@ function playRound() {
         playerScore = playerScore+1
         return result = win
     }
-    else if (playerSelection === "Papers" && computerSelection === "Rock") {
+    else if (playerSelection === "Paper" && computerSelection === "Rock") {
         alert(`You win, ${playerSelection} beats ${computerSelection}`)
         playerScore = playerScore+1
         return result = win
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Papers") {
+    else if (playerSelection === "Scissors" && computerSelection === "Paper") {
         alert(`You win, ${playerSelection} beats ${computerSelection}`)
         playerScore = playerScore+1
         return result = win
