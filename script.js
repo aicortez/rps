@@ -2,10 +2,7 @@
 //
 // PC will randomly choose Rock, Papers or Scissors at the start of the game
 // Player will input Rock, Papers or Scissors
-// Rock > Scissors
-// Papers > Rock
-// Scissors > Papers
-// Best of 5
+// Winner is determined after 5 rounds
 
 const rps = ["Rock", "Papers", "Scissors"];
 
@@ -24,7 +21,7 @@ let computerScore = 0
 function playRound() {
     playerSelection = prompt(`Choose between ${rps[0]}, ${rps[1]} or ${rps[2]}`);
     playerSelection = (playerSelection.charAt(0).toUpperCase() + (playerSelection.slice(1).toLowerCase()));
-    const  computerSelection = getComputerChoice();
+    const computerSelection = getComputerChoice(); // Randomize selection at the start of each round
     if (playerSelection === computerSelection) {
         alert(`It's a tie! You both picked ${playerSelection}`)
         return result = tie
@@ -52,15 +49,10 @@ function playRound() {
 
 function playGame() {
     playRound(); // game 1
-    console.log(result);
     playRound(); // game 2
-    console.log(result);
     playRound(); // game 3
-    console.log(result);
     playRound(); // game 4
-    console.log(result);
     playRound(); // game 5
-    console.log(result);
     if (playerScore === computerScore) {
         alert(`${tie} Score: ${playerScore} - ${computerScore}`)
     } else if (playerScore > computerScore) {
@@ -70,4 +62,4 @@ function playGame() {
     }
 }
 
-playGame();
+playGame(); // Initializes the game
